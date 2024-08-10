@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Check</title>
+</head>
+<body>
+    <div id="idp"></div>
+
+    <script>
+	document.getElementById('idp').innerHTML = "<p>Checking you completed the links, you'll be redirected in a second...</p>";
+        function checkReferrer() {
+            const referrer = document.referrer;
+            const lootKeyword = 'loot';
+
+            if (referrer.includes(lootKeyword)) {
+                window.location.href = 'https://scwz.me/8Y4TuY';
+            } else {
+                document.getElementById('idp').innerHTML = "<h1>Please don't bypass the links😓 instead go back and complete it normally</h1>";
+            }
+        }
+
+        window.onload = checkReferrer;
+    </script>
+</body>
+</html>
